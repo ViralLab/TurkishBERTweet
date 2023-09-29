@@ -2,20 +2,23 @@
 1. [Introduction](#introduction)
 2. [Main results](#results)
 3. [Using TurkishBERTweet with `transformers`](#transformers)
-    - [Pre-trained models](#models2)
+    - [Models](#trainedModels)
     - [Example usage](#usage2)
     - [Normalize raw input Tweets](#preprocess)
 4. [Citation](#citation)
 # <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
 
-<!-- ## Results
-|   Dataset  |  Roberta   |            |            |            |
-|------------|------------|------------|------------|------------|
-| 1          |            |            |            |            |
-| 2          |            |            |            |            |
-| 3          |            |            |            |            | -->
+
+# <a name="results"></a> Main Results
+![alt text](main_results.png "Title")
+
+
 
 <!-- https://huggingface.co/VRLLab/TurkishBERTweet -->
+# <a name="trainedModels"></a> Models
+Model | #params | Arch. | Max length | Pre-training data
+---|---|---|---|---
+`VRLLab/TurkishBERTweet` | 163M | base | 128 | 894M Turkish Tweets (uncased)
 
 # <a name="usage2"></a> Example usage
 
