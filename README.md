@@ -20,7 +20,7 @@
 # <a name="citation"></a> Citation
 ```bibtex
 @article{najafi2022TurkishBERTweet,
-    title={},
+    title={TurkishBERTweet in the shadow of Large Language Models},
     author={Najafi, Ali and Varol, Onur},
     journal={arXiv preprint },
     year={2023}
