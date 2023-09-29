@@ -8,14 +8,35 @@
 4. [Citation](#citation)
 # <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
 
-
-
 <!-- ## Results
 |   Dataset  |  Roberta   |            |            |            |
 |------------|------------|------------|------------|------------|
 | 1          |            |            |            |            |
 | 2          |            |            |            |            |
 | 3          |            |            |            |            | -->
+
+<!-- https://huggingface.co/VRLLab/TurkishBERTweet -->
+
+# <a name="usage2"></a> Example usage
+
+```python
+import torch
+from transformers import AutoTokenizer
+from Preprocessor import preprocess
+
+tokenizer = AutoTokenizer.from_pretrained("VRLLab/TurkishBERTweet")
+turkishBERTweet = AutoModel.from_pretrained("VRLLab/TurkishBERTweet")
+
+text = """Lab'ımıza "viral" adını verdik çünkü amacımız disiplinler arası sınırları aşmak ve aralarında yeni bağlantılar kurmak! 💥🔬 #ViralLab #DisiplinlerArası #YenilikçiBağlantılar"""
+
+preprocessed_text = preprocess(text)
+input_ids = torch.tensor([tokenizer.encode(preprocessed_text)])
+
+with torch.no_grad():
+    features = turkishBERTweet(input_ids)  # Models outputs are now tuples
+```
+
+
 
 # <a name="citation"></a> Citation
 ```bibtex
