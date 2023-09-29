@@ -45,7 +45,7 @@ lab'ımıza "viral" adını verdik çünkü amacımız disiplinler arası sını
 
 ```python
 import torch
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoModel
 from Preprocessor import preprocess
 
 tokenizer = AutoTokenizer.from_pretrained("VRLLab/TurkishBERTweet")
