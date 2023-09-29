@@ -22,6 +22,24 @@ Model | #params | Arch. | Max length | Pre-training data
 
 # <a name="usage2"></a> Example usage
 
+
+## Twitter Preprocessor
+```python
+from Preprocessor import preprocess
+
+text = """Lab'ımıza "viral" adını verdik çünkü amacımız disiplinler arası sınırları aşmak ve aralarında yeni bağlantılar kurmak! 🔬 #ViralLab
+https://varollab.com/"""
+
+preprocessed_text = preprocess(text)
+print(preprocessed_text)
+```
+Output:
+```output
+lab'ımıza "viral" adını verdik çünkü amacımız disiplinler arası sınırları aşmak ve aralarında yeni bağlantılar kurmak! <emoji> mikroskop </emoji> <hashtag> virallab </hashtag> <http> varollab.com </http>
+```
+
+## Feature Extraction
+
 ```python
 import torch
 from transformers import AutoTokenizer
