@@ -1,13 +1,31 @@
+#### Table of contents
+1. [Introduction](#introduction)
+2. [Main results](#results)
+3. [Using TurkishBERTweet with `transformers`](#transformers)
+    - [Pre-trained models](#models2)
+    - [Example usage](#usage2)
+    - [Normalize raw input Tweets](#preprocess)
+4. [Citation](#citation)
+# <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
 
-## Results
+
+
+<!-- ## Results
 |   Dataset  |  Roberta   |            |            |            |
 |------------|------------|------------|------------|------------|
 | 1          |            |            |            |            |
 | 2          |            |            |            |            |
-| 3          |            |            |            |            |
+| 3          |            |            |            |            | -->
 
-
-
+# <a name="citation"></a> Citation
+```bibtex
+@article{najafi2022TurkishBERTweet,
+    title={},
+    author={Najafi, Ali and Varol, Onur},
+    journal={arXiv preprint },
+    year={2023}
+}
+```
 
 ## Acknowledgments
 We thank [Fatih Amasyali](https://avesis.yildiz.edu.tr/amasyali) for providing access to Tweet Sentiment datasets from Kemik group.
