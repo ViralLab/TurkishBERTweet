@@ -4,7 +4,9 @@
 3. [Using TurkishBERTweet with `transformers`](#transformers)
     - [Models](#trainedModels)
     - [Example usage](#usage2)
-    - [Normalize raw input Tweets](#preprocess)
+        - [Twitter Preprocessor](#preprocess)
+        - [Feature Extraction](#feature_extraction)
+
 4. [Citation](#citation)
 # <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
 
@@ -23,7 +25,7 @@ Model | #params | Arch. | Max length | Pre-training data
 # <a name="usage2"></a> Example usage
 
 
-## Twitter Preprocessor
+## <a name="preprocess"></a> Twitter Preprocessor
 ```python
 from Preprocessor import preprocess
 
@@ -38,7 +40,8 @@ Output:
 lab'ımıza "viral" adını verdik çünkü amacımız disiplinler arası sınırları aşmak ve aralarında yeni bağlantılar kurmak! <emoji> mikroskop </emoji> <hashtag> virallab </hashtag> <http> varollab.com </http>
 ```
 
-## Feature Extraction
+
+## <a name="feature_extraction"></a> Feature Extraction
 
 ```python
 import torch
