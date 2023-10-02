@@ -29,7 +29,7 @@ Model | #params | Arch. | Max length | Pre-training data
 Model | train f1 | dev f1 | test f1 | Dataset Size
 ---|---|---|---|---
 `VRLLab/TurkishBERTweet-Lora-SA` | 0.799 | 0.687 | 0.692 | 42,476 Turkish Tweets  
-`VRLLab/TurkishBERTweet-Lora-hs` | 0.915 | 0.796 | 0.831 | 4,683 Turkish Tweets  
+`VRLLab/TurkishBERTweet-Lora-HS` | 0.915 | 0.796 | 0.831 | 4,683 Turkish Tweets  
 # <a name="usage2"></a> Example usage
 
 
