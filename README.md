@@ -96,7 +96,7 @@ if getattr(tokenizer, "pad_token_id") is None:
 
 id2label_sa = {0: "negative", 2: "positive", 1: "neutral"}
 turkishBERTweet_sa = AutoModelForSequenceClassification.from_pretrained(
-    peft_config.base_model_name_or_path, return_dict=True, num_labels=3, id2label=id2label_sa
+    peft_config.base_model_name_or_path, return_dict=True, num_labels=len(id2label_sa), id2label=id2label_sa
 )
 turkishBERTweet_sa = PeftModel.from_pretrained(turkishBERTweet_sa, peft_model)
 
@@ -148,7 +148,7 @@ if getattr(tokenizer, "pad_token_id") is None:
 
 id2label_hs = {0: "No", 1: "Yes"}
 turkishBERTweet_hs = AutoModelForSequenceClassification.from_pretrained(
-    peft_config.base_model_name_or_path, return_dict=True, num_labels=2, id2label=id2label_hs
+    peft_config.base_model_name_or_path, return_dict=True, num_labels=len(id2label_hs), id2label=id2label_hs
 )
 turkishBERTweet_hs = PeftModel.from_pretrained(turkishBERTweet_hs, peft_model)
 
