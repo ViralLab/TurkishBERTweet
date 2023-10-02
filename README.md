@@ -83,14 +83,13 @@ from transformers import (
 from Preprocessor import preprocess
  
 
-pretrained_model_path =  "VRLLab/TurkishBERTweet"
 peft_model = "VRLLab/TurkishBERTweet-Lora-SA"
 peft_config = PeftConfig.from_pretrained(peft_model)
 
 # loading Tokenizer
 padding_side = "right"
 tokenizer = AutoTokenizer.from_pretrained(
-    pretrained_model_path, padding_side=padding_side
+    peft_config.base_model_name_or_path, padding_side=padding_side
 )
 if getattr(tokenizer, "pad_token_id") is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
@@ -136,14 +135,13 @@ from transformers import (
 from Preprocessor import preprocess
  
 
-pretrained_model_path =  "VRLLab/TurkishBERTweet"
 peft_model = "VRLLab/TurkishBERTweet-Lora-SA"
 peft_config = PeftConfig.from_pretrained(peft_model)
 
 # loading Tokenizer
 padding_side = "right"
 tokenizer = AutoTokenizer.from_pretrained(
-    pretrained_model_path, padding_side=padding_side
+    peft_config.base_model_name_or_path, padding_side=padding_side
 )
 if getattr(tokenizer, "pad_token_id") is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
