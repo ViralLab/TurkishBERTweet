@@ -7,6 +7,7 @@
     - [Example usage](#usage2)
         - [Twitter Preprocessor](#preprocess)
         - [Feature Extraction](#feature_extraction)
+        - [Sentiment Classification](#sa_lora)
 
 4. [Citation](#citation)
 # <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
