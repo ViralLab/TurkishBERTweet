@@ -135,7 +135,7 @@ from transformers import (
 from Preprocessor import preprocess
  
 
-peft_model = "VRLLab/TurkishBERTweet-Lora-SA"
+peft_model = "VRLLab/TurkishBERTweet-Lora-HS"
 peft_config = PeftConfig.from_pretrained(peft_model)
 
 # loading Tokenizer
