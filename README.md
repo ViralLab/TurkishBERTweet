@@ -94,9 +94,9 @@ tokenizer = AutoTokenizer.from_pretrained(
 if getattr(tokenizer, "pad_token_id") is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
 
-id2label = {0: "negative", 2: "positive", 1: "neutral"}
+id2label_sa = {0: "negative", 2: "positive", 1: "neutral"}
 turkishBERTweet_sa = AutoModelForSequenceClassification.from_pretrained(
-    peft_config.base_model_name_or_path, return_dict=True, num_labels=3, id2label=id2label
+    peft_config.base_model_name_or_path, return_dict=True, num_labels=3, id2label=id2label_sa
 )
 turkishBERTweet_sa = PeftModel.from_pretrained(turkishBERTweet_sa, peft_model)
 
@@ -113,7 +113,7 @@ with torch.no_grad():
     for s in preprocessed_texts:
         ids = tokenizer.encode_plus(s, return_tensors="pt")
         label_id = turkishBERTweet_sa(**ids).logits.argmax(-1).item()
-        print(id2label[label_id],":", s)
+        print(id2label_sa[label_id],":", s)
 ```
 
 ```output
@@ -146,9 +146,9 @@ tokenizer = AutoTokenizer.from_pretrained(
 if getattr(tokenizer, "pad_token_id") is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
 
-id2label = {0: "negative", 2: "positive", 1: "neutral"}
+id2label_hs = {0: "No", 1: "Yes"}
 turkishBERTweet_hs = AutoModelForSequenceClassification.from_pretrained(
-    peft_config.base_model_name_or_path, return_dict=True, num_labels=2, id2label=id2label
+    peft_config.base_model_name_or_path, return_dict=True, num_labels=2, id2label=id2label_hs
 )
 turkishBERTweet_hs = PeftModel.from_pretrained(turkishBERTweet_hs, peft_model)
 
@@ -160,7 +160,6 @@ sample_texts = [
 
 
 preprocessed_texts = [preprocess(s) for s in sample_texts]
-id2label_hs = {0: "No", 1: "Yes"}
 with torch.no_grad():
     for s in preprocessed_texts:
         ids = tokenizer.encode_plus(s, return_tensors="pt")
