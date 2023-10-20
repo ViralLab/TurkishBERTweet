@@ -30,6 +30,7 @@ def url_handler(text: str):
     urls = list(url_extractor.gen_urls(text))
     updated_urls = [url if "http" in url else f"https://{url}" for url in urls]
     domains = [urllib.parse.urlparse(url_text).netloc for url_text in updated_urls]
+    domains = list(set(domains))
     for i in range(len(domains)):
         text = text.replace(urls[i], f" <http> {domains[i]} </http> ")
     return text
