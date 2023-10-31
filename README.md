@@ -72,6 +72,7 @@ with torch.no_grad():
 ## <a name="sa_lora"></a> Sentiment Classification
 
 ```python
+import torch
 from peft import (
     PeftModel,
     PeftConfig,
