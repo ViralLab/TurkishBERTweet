@@ -23,13 +23,13 @@
 # <a name="trainedModels"></a> Model
 Model | #params | Arch. | Max length | Pre-training data
 ---|---|---|---|---
-`VRLLab/TurkishBERTweet` | 163M | base | 128 | 894M Turkish Tweets (uncased)
+[`VRLLab/TurkishBERTweet`](https://huggingface.co/VRLLab/TurkishBERTweet) | 163M | base | 128 | 894M Turkish Tweets (uncased)
 
 # <a name="loraAdapter"></a> Lora Adapters
 Model | train f1 | dev f1 | test f1 | Dataset Size
 ---|---|---|---|---
-`VRLLab/TurkishBERTweet-Lora-SA` | 0.799 | 0.687 | 0.692 | 42,476 Turkish Tweets  
-`VRLLab/TurkishBERTweet-Lora-HS` | 0.915 | 0.796 | 0.831 | 4,683 Turkish Tweets  
+[`VRLLab/TurkishBERTweet-Lora-SA`](https://huggingface.co/VRLLab/TurkishBERTweet-Lora-SA) | 0.799 | 0.687 | 0.692 | 42,476 Turkish Tweets  
+[`VRLLab/TurkishBERTweet-Lora-HS`](https://huggingface.co/VRLLab/TurkishBERTweet-Lora-HS) | 0.915 | 0.796 | 0.831 | 4,683 Turkish Tweets  
 # <a name="usage2"></a> Example usage
 
 
@@ -178,12 +178,13 @@ Yes : kasmayin artik ya kac kere tanik olduk bu azgin tehlikeli â€œmultecilerinâ
 # <a name="citation"></a> Citation
 ```bibtex
 @article{najafi2022TurkishBERTweet,
-    title={TurkishBERTweet in the shadow of Large Language Models},
+    title={TurkishBERTweet: Fast and Reliable Large Language Model for Social Media Analysis},
     author={Najafi, Ali and Varol, Onur},
-    journal={arXiv preprint },
+    journal={arXiv preprint 2311.18063},
     year={2023}
 }
 ```
+
 
 ## Acknowledgments
 We thank [Fatih Amasyali](https://avesis.yildiz.edu.tr/amasyali) for providing access to Tweet Sentiment datasets from Kemik group.
