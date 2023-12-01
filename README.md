@@ -11,7 +11,7 @@
         - [HateSpeech Detection](#hs_lora)
 
 4. [Citation](#citation)
-# <a name="introduction"></a> TurkishBERTweet in the shadow of Large Language Models
+# <a name="introduction"></a> TurkishBERTweet: Fast and Reliable Large Language Model for Social Media Analysis
 
 
 # <a name="results"></a> Main Results
