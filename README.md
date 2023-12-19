@@ -32,6 +32,17 @@ Model | train f1 | dev f1 | test f1 | Dataset Size
 [`VRLLab/TurkishBERTweet-Lora-HS`](https://huggingface.co/VRLLab/TurkishBERTweet-Lora-HS) | 0.915 | 0.796 | 0.831 | 4,683 Turkish Tweets  
 # <a name="usage2"></a> Example usage
 
+```bash
+git clone git@github.com:ViralLab/TurkishBERTweet.git
+cd TurkishBERTweet
+python -m venv venv
+source activate venv
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install peft
+pip install transformers
+```
+
 
 ## <a name="preprocess"></a> Twitter Preprocessor
 ```python
