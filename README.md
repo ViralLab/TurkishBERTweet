@@ -36,7 +36,7 @@ Model | train f1 | dev f1 | test f1 | Dataset Size
 git clone git@github.com:ViralLab/TurkishBERTweet.git
 cd TurkishBERTweet
 python -m venv venv
-source activate venv
+source venv/bin/activate
 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install peft
