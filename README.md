@@ -175,7 +175,7 @@ preprocessed_texts = [preprocess(s) for s in sample_texts]
 with torch.no_grad():
     for s in preprocessed_texts:
         ids = tokenizer.encode_plus(s, return_tensors="pt")
-        label_id = best_model_hs(**ids).logits.argmax(-1).item()
+        label_id = turkishBERTweet_hs(**ids).logits.argmax(-1).item()
         print(id2label_hs[label_id],":", s)
 ```
 
