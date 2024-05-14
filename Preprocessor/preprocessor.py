@@ -14,8 +14,9 @@ def hashtag_handler(text: str):
 
 
 def cashtag_handler(text: str):
-    pattern = r"(\$([^\s]+))"
-    return re.sub(pattern, " <cashtag> \\2 </cashtag> ", text)
+    cash_tags = u"[₿Ξ⟠✕₮₳ÐŁɃϑ⨎εƁɱꜩξ◈ⓩ⟁ӾÑⱠȿɌꞤⱣΨ$¢£¤¥֏؋৲৳৻૱௹฿៛\u20a0-\u20bd\ua838\ufdfc\ufe69\uff04\uffe0\uffe1\uffe5\uffe6]"
+    pattern = rf"({cash_tags}([^\s]+))"
+    return re.sub(pattern, " <cashtag> \\1 </cashtag> ", text)
 
 
 def mention_handler(text: str):
