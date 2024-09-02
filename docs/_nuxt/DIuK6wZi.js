@@ -1,1 +1,0 @@
-import{n as a,q as o,s as r}from"./Bpv89zRg.js";const u=a(t=>{const e=r().public.baseURL||"/";if(!t.fullPath.toLowerCase().startsWith(e.toLowerCase())){const s=e+t.fullPath.slice(e.length);return o(s)}});export{u as default};
